@@ -40,4 +40,15 @@ public class CreditAccountTest {
 
         Assertions.assertEquals(1_500, account.getBalance());
     }
+
+    @Test
+    public void calcCreditRateBalanceUpZero() {
+        CreditAccount account = new CreditAccount(
+                1_000,
+                5_000,
+                15
+        );
+
+        Assertions.assertEquals(0, account.yearChange());
+    }
 }
