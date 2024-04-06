@@ -28,4 +28,16 @@ public class CreditAccountTest {
         account.pay(7_000);
         Assertions.assertEquals(1_000, account.getBalance());
     }
+
+    @Test
+    public void addBalance() {
+        CreditAccount account = new CreditAccount(
+                1_000,
+                5_000,
+                15
+        );
+        account.add(500);
+
+        Assertions.assertEquals(1_500, account.getBalance());
+    }
 }
