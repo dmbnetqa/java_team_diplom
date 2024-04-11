@@ -51,4 +51,12 @@ public class CreditAccountTest {
 
         Assertions.assertEquals(0, account.yearChange());
     }
+
+    @Test
+    public void recallIllegalArgumentException() {
+
+        Assertions.assertThrows(IllegalArgumentException.class, () -> {
+            new CreditAccount(1_000, -5_000, 15);
+        });
+    }
 }
