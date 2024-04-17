@@ -100,15 +100,14 @@ public class SavingAccountTest {
 
     @Test
     public void shouldNegativeRate() { // проверка отрицательной ставки
-        SavingAccount account = new SavingAccount(
-                2_000,
-                1_000,
-                10_000,
-                -5
-        );
-
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            account.yearChange();
+            SavingAccount account = new SavingAccount(
+                    2_000,
+                    1_000,
+                    10_000,
+                    -5);
+
+
         });
     }
 }
