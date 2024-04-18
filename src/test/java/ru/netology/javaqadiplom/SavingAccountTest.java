@@ -106,8 +106,6 @@ public class SavingAccountTest {
                     1_000,
                     10_000,
                     -5);
-
-
         });
     }
 }
